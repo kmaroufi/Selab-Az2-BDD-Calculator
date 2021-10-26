@@ -21,6 +21,7 @@ public class Stepdefs {
         value = arg0;
     }
 
+
     @When("^I press rvs button$")
     public void iPressRvsButton() {
         result = calculator.reverse(value);
@@ -35,4 +36,8 @@ public class Stepdefs {
     public void iExpectTheResult() {
         Assert.assertNull(result);
     }
+
+
+    @When("^I press sqr button$")
+    public void iPressSqrButton() { result = calculator.sqr(value); }
 }
